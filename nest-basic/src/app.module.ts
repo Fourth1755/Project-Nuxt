@@ -8,16 +8,16 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.DATABASE_HOST,
-      port: 3306,
-      username: process.env.DATABASE_USER,
-      password: process.env.DATABASE_PASSWORD,
-      database: process.env.DATABASE_NAME,
-      entities: [ArtistsModule],
-      synchronize: true,
-    }),
+    // TypeOrmModule.forRoot({
+    //   type: 'postgres',
+    //   host: 'john.db.elephantsql.com',
+    //   port: 3306,
+    //   username: 'qbunhtyx',
+    //   password: 'sksr6TcW1q8wUuhcE6DFKfVknbr_5nrf',
+    //   database: 'MMProject',
+    //   entities: [ArtistsModule],
+    //   synchronize: true,
+    // }),
   ],
   controllers: [AppController, ArtistsController],
   providers: [AppService, ArtistsService],
